@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+
+body{
+    background-image: url("Images/HomeImage.avif");
+    background-size: cover;
+    height:100px;
+}
+.header-1{
+    background:rgba(234, 77, 10, 0.937);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0rem 50px;
+    margin-top:3px;
+    height: 60px;
+    width:auto;
+  }
+  .logo{
+    color:var(--green);
+    font-weight: bolder;
+    font-size: 3rem;
+  }
+  h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  
+  .header-1 .search-box-container{
+    display: flex;
+    height:5rem;
+  }
+  
+  .header-1 .search-box-container #search-box{
+    height: 100%;
+    width:100%;
+    padding:1rem;
+    font-size: 2rem;
+    color:#333;
+    border:.1rem solid rgba(0,0,0,.3);
+    text-transform: none;
+    border-radius: 10px;
+  }
+  
+  .header-1 .search-box-container label{
+    height: 50%;
+    width:8rem;
+    font-size: 2.5rem;
+    line-height: 5rem;
+    background:var(--green);
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .header-1 .search-box-container label:hover{
+    background:var(--black);
+  }
+
+  .search-box-container {
+    position: relative;
+    display: inline-block;
+   
+  }
+input[type="search"] {
+    padding-right: 30px; /* Leave space for the icon */
+}
+.nav-link {
+  font-size: 20px;   
+  padding: 10px 15px; 
+  color:black
+}
+.nav justify-content-end{
+  margin-right: 50px;
+
+}
+.nav-item{
+  margin-right: 30px;
+}
+.nav justify-content-end .nav-item:hover{
+  background-color: #d25a0a;
+}
+
+.home{
+ 
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.home .content{
+  flex:1 1 40rem;
+  margin-left: 700px;
+  margin-top: 90px;
+}
+
+.home .content span{
+  font-size: 5rem;
+  color:#160f0f;
+  font-style: oblique;
+}
+
+.home .content h3{
+  font-size: 10rem;
+  font-style: italic;
+  color:var(--black);
+  margin-left: 200px;
+}
+
+.links{
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  margin-left: 100px;
+
+}
+

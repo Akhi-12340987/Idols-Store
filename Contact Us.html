@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Contact Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Background styling for the form */
+        body{
+            font-family:'Arial', sans-serif;
+            background: color #f8f9af;
+            background-color: rgb(207, 230, 223);
+        }
+        .bg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(images/conta.jpg);
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+       
+        form{
+            background-color: rgba(155, 206, 235, 0.9);
+            padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 2 4px 8px rgba(5, 5, 5, 0.1);
+        }
+
+        /* Centering and formatting the form */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 5 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Submit button hover */
+        .btn-info {
+            width: 100%;
+            text-transform: uppercase;
+        }
+
+        .btn-info:hover {
+            background-color: #31b0d5;
+        }
+
+        .navbar {
+    display: flex;               /* Makes the nav a flex container */
+    justify-content: space-around; /* Spreads the buttons evenly */
+    align-items: center;          /* Aligns buttons vertically in the center */
+}
+
+.navbar a {
+      
+    padding: 10px 5px;       /* Decreases the padding inside the button */
+    font-size: 14px;         /* Decreases the font size */     /* Keeps space between buttons */
+    border-radius: 10px; 
+    width: 1000px;  
+    margin-right:10px;   /* Optional: smooths button edges */
+}
+        /* Adds space between the buttons */
+
+.navbar a:last-child {
+    margin-right: 0;              /* Removes the right margin from the last button */
+}
+.header-2{
+    margin-top:50px;
+    background-color: rgb(50, 47, 49);
+   margin-left:150px;
+   margin-right:150px;
+   padding-top: 15px;
+   padding-bottom: 10px;
+   padding-left:15px;
+   padding-right:15px;  
+    
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-2">
+            <div id="menu-bar" class="fas fa-bars"></div>
+            <nav class="navbar">
+                
+                <a href="Registration.html" class="btn btn-info" role="button" style="border: green;">REGISTER</a>
+                <a href="login.html" class="btn btn-info" role="button" style="border: green;">LOGIN</a>
+                <a href="Explore.html" class="btn btn-info" role="button" style="border: green;">EXPLORE</a>
+                <a href="Demo.html" class="btn btn-info" role="button" style="border: green;">Idol Making</a>
+
+                
+            </nav>
+        </div>
+    </header>
+    
+    
+
+    <div class="bg">
+        <div class="form-container">
+            <form action="ContactSuccess.html" method="POST">
+                <h1>Contact Us</h1>
+                
+                <div class="form-group">
+                    <label for="fname">Full Name:</label>
+                    <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" pattern="^\d{10}$" placeholder="Enter your phone number" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-info">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <a href="Home.html" style="color: rgb(10, 2, 2); padding: 5px; border-radius: 5px; margin-left: 20px;">Back to Home</a>
+</body>
+
+
+</html>

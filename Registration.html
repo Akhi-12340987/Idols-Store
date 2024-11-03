@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Registrationstyles.css">
+    <style>
+        .is-invalid + .invalid-feedback {
+            display: block;
+
+        }
+        body {
+        background-image: url('Images/RegistrationImage.jpeg');
+        background-size: cover; 
+        background-position: center;
+        background-repeat: no-repeat; 
+    }
+    .container mt-5{
+        margin-left: 800px;
+
+    }a{
+        color:black;
+    }
+
+       
+        
+    </style>
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5 p-3 ms-auto">
+                <div class="card shadow-sm p-3">
+                    <div class="card-header text-center bg-primary text-white">
+                        <h4>Create an Account</h4>
+                    </div>
+
+                    <form id="registrationForm" novalidate>
+                      <div class="row g-4 p-3"> <!-- Row to hold both fields in one row -->
+                        <div class="col-md-5 ">
+                          <label for="firstName" class="form-label ms-3 ">First Name</label>
+                          <input type="text" class="form-control me-2 " id="firstName" placeholder="Enter your first name" required>
+                          <div class="invalid-feedback ms-3">Please enter your first name.</div>
+                        </div>
+                    
+                        <div class="col-md-6 p-2">
+                          <label for="lastName" class="form-label ms-3 ">Last Name</label>
+                          <input type="text" class="form-control me-2 " id="lastName" placeholder="Enter your last name" required>
+                          <div class="invalid-feedback ms-3">Please enter your last name.</div>
+                        </div>
+                      </div>
+
+                      <div class="mb-3 p-2">
+                        <label for="email" class="form-label ">Email address</label>
+                        <input type="email" class="form-control " id="email" placeholder="Enter your email" required>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+
+                    <div class="mb-3 p-2">
+                        <label for="contact" class="form-label ">Contact</label>
+                        <input type="tel" class="form-control" id="myid" pattern="[0-9]{10}" placeholder="Enter your Number" required>
+                       
+                        <div class="invalid-feedback">Please enter 10 digit number</div>
+                    </div>
+
+                    <div class="mb-3 p-2">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter a password" required minlength="6">
+                        <div class="invalid-feedback">
+                            Password must be at least 6 characters long.
+                        </div>
+                    </div>
+                    <div class="mb-3 p-2">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+                        <div class="invalid-feedback">
+                            Passwords do not match.
+                        </div>
+                    </div>
+                    <div class="d-grid p-3">
+                      <button type="submit" class="btn btn-primary">Register</button>
+                  </div>
+                    </form>
+                    
+                       
+                    </div>
+                    <div class="card-footer text-center">
+                        <small>Already have an account? <a href="login.html">Login</a></small>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('registrationForm');
+            const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('confirmPassword');
+
+            form.addEventListener('submit', (event) => {
+                event.preventDefault(); // Prevent form submission for validation demo
+                
+                // Check if passwords match
+                if (password.value !== confirmPassword.value) {
+                    confirmPassword.classList.add('is-invalid');
+                } else {
+                    confirmPassword.classList.remove('is-invalid');
+                }
+
+                // Check form validity
+                if (!form.checkValidity()) {
+                    form.classList.add('was-validated');
+                } else {
+                    alert('Registration successful!');
+                }
+            });
+
+            // Clear validation feedback when input changes
+            [password, confirmPassword].forEach(input => {
+                input.addEventListener('input', () => {
+                    input.classList.remove('is-invalid');
+                });
+            });
+        });
+    </script>
+
+<a href="Home.html" style="color: rgb(10, 2, 2); padding: 5px; border-radius: 5px; ">Back to Home</a>
+
+
+</body>
+</html>
